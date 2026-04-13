@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+motor
+pymongo
+PyPDF2
+scikit-learn
+pandas
+numpy
+nltk
+joblib
+python-multipart
+python-dotenv

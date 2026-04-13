@@ -1,86 +1,110 @@
- MatchAI: AI-Based Resume Screening & Candidate Recommendation System
+# 🧠 MatchAI: Candidate Recommendation System
+> An intelligent platform that aligns candidate resumes with specific job descriptions using AI.
 
-Developed during the AI/ML Engineering Internship at **Shamgar Software Solutions**.
+MatchAI is an advanced recruitment engine that leverages Natural Language Processing (NLP) to bridge the gap between candidate resumes and specific job requirements. It doesn't just scan; it analyzes context, seniority, and skill gaps to provide actionable career intelligence and tailored optimization plans.
 
-MatchAI is a professional recruitment tool that uses Natural Language Processing (NLP) to analyze resumes against specific job descriptions. It provides candidates with a dynamic "Optimization Plan" and "Career Trajectories" based on their extracted skills and detected seniority level.
+---
 
+## 🌟 What makes it special?
 
+* **Dynamic Seniority Detection:** Automatically identifies if a candidate is Junior, Mid-Level, or Senior based on experience patterns extracted from the resume.
+* **Explainable Feedback:** It doesn't just give a score. It provides a Role-Based Optimization Plan, identifying exactly which keywords and skills are missing compared to the target job description.
+* **Secure User Isolation:** Built with enterprise-grade privacy in mind, ensuring that data remains secure and isolated to individual user sessions using unique MongoDB identifiers.
 
- 🚀 Project Objective
-To design and develop an AI/ML solution that analyzes resumes and job descriptions to score, rank, and recommend candidates using NLP and machine learning techniques.
+---
 
- 🛠️ Technical Architecture
-- **Frontend**: Next.js 15+, Tailwind CSS, Lucide React.
-- **Backend**: FastAPI (Python), Uvicorn.
-- **AI/NLP Layer**: Scikit-learn, TF-IDF Vectorization, Cosine Similarity, Regex-based Seniority Detection.
-- **Database**: MongoDB for secure, isolated user session and analysis storage.
+## 🖥 System Overview & Visualizations
 
+### Primary Interfaces
+| The Landing Experience | Personalized AI Gateway |
+| :---: | :---: |
+| ![Landing Page](./screenshot/landing%203.png) | ![Upload Page](./screenshot/personalised%20scan.png) |
 
+### Inference Capabilities
+| Intelligence Dashboard & ATS Scoring |
+| :---: |
+| ![Dashboard](./screenshot/user%20dashboard.png) |
 
-✨ Key Features
-- Dynamic Seniority Detection**: Extracts years of experience from resume text to categorize candidates as Junior, Mid-Level, or Senior.
-- Role-Based Optimization Plan**: Compares the resume against a user-provided Job Description to identify specific missing keywords and provide tailored improvement tips.
-- Intelligent Career Trajectories**: Recommends job roles (e.g., "Senior Python Developer") based on the intersection of found skills and detected seniority.
-- ATS Scoring Engine**: Calculates an overall match percentage by analyzing technical skill density and formatting.
-- Secure User Isolation**: Ensures that data remains private to the individual user session using unique MongoDB identifiers.
+---
 
-
-
- 📂 Project Structure
+## 📂 Project Structure & File Paths
 
 ```text
 Resume_AI_Project/
 ├── backend/                # FastAPI Backend
 │   ├── app/
 │   │   ├── models/         # Pre-trained ML models (.pkl)
-│   │   ├── routes/         # API Endpoints (resume.py)
 │   │   ├── services/       # Core Logic (model_service.py, database_service.py)
+│   │   ├── routes/         # API Endpoints (resume.py)
 │   │   └── utils/          # Text Processing (PDF/DOCX parsers)
-│   ├── main.py             # Entry point
+│   ├── main.py             # Server Entry Point
 │   └── requirements.txt    # Python dependencies
 ├── frontend/               # Next.js Frontend
 │   ├── app/                
-│   │   ├── dashboard/      # Dashboard & Upload Pages
-│   │   ├── login/          # Auth Page
-│   │   └── page.tsx        # Landing Page
-│   ├── lib/                # API and Auth helpers
-│   └── public/             # Static assets
-└── screenshots/            # Project visual documentation
+│   │   ├── dashboard/      # Dashboard UI Components
+│   │   ├── login/          # Authentication Gateway
+│   │   └── page.tsx        # Landing Page UI
+│   └── lib/                # API and Auth helpers
+└── screenshot/             # Visual Assets Directory
+    ├── landing 3.png
+    ├── personalised scan.png
+    └── user dashboard.png
+    🛠 Tech Stack & Architecture
+Core Components
+Frontend: Next.js 15+ (App Router), Tailwind CSS, Lucide-React.
 
- 📸 Project Screenshots
+Backend: FastAPI (Python), Uvicorn, RESTful Architecture.
 
- 1. Landing Page
-*Professional "Cream & Glass" aesthetic presenting project objectives.*
-![Landing Page](./screenshot/landing%203.png)
+Machine Learning: Scikit-Learn, NumPy, TF-IDF Vectorization.
 
- 2. Personalized Upload
-*Features a dual-input system for the Resume and the Target Job Description.*
-![Upload Page](./screenshot/personalised%20scan.png)
+Database: MongoDB (NoSQL).
 
- 3. Analysis Dashboard
-*Dynamic ATS Scoring, customized Optimization Plans, and Skill-Mapped Recommendations.*
-![Dashboard](./screenshot/user%20dashboard.png)
+🔬 Model Technical Analysis
+Algorithm: NLP Skill Extraction & Cosine Similarity
+We utilized a combination of TF-IDF vectorization and heuristic skill mapping for this recruitment use case:
 
-⚙️ Installation & Setup
-Backend
-Navigate to the /backend folder.
+Explainability: By directly comparing extracted resume tokens against job description requirements, we provide real-time feature gaps. Users see exactly which skills are needed to improve their match.
 
-Install dependencies: pip install -r requirements.txt
+Seniority Parsing: Engineered regex pipelines accurately detect years of experience to dynamically adjust the recommended career trajectories.
 
-Start the server: uvicorn app.main:app --reload
+Adaptive Scoring: Achieved a highly responsive ATS Scoring Engine that penalizes skill mismatches while rewarding high-density technical alignment.
 
-Frontend
-Navigate to the /frontend folder.
+🚀 Key Functionalities
+Dual-Input Analysis: Switch seamlessly between general resume scoring and highly targeted role-based analysis by providing a specific job description.
 
-Install dependencies: npm install
+Intelligent Career Trajectories: Recommends specific job roles (e.g., "Senior Python Developer") based on the intersection of found skills and detected seniority.
 
-Run the development server: npm run dev
+Optimization Plan: Generates customized, actionable bullet points to help candidates improve their formatting and content.
 
-👨‍💻 Developer
+High-Speed Inference: FastAPI ensures rapid processing from document upload to fully visualized dashboard results.
+
+📥 Installation & Usage
+Clone the Repository
+
+Bash
+git clone [https://github.com/hu17-m/MatchAI-Resume-Screener.git](https://github.com/hu17-m/MatchAI-Resume-Screener.git)
+Backend Setup
+
+Bash
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+Frontend Setup
+
+Bash
+cd frontend
+npm install
+npm run dev
+👨‍💻 Developed By
 Himanshu Gadekar AI/ML Engineer Intern @ Shamgar Software Solutions
 
 LinkedIn
 
-GitHub
+GitHub Profile
 
-© 2026 MatchAI Project • Intern Engagement Program
+🎯 Future Roadmap
+[ ] Transformer Integration: Upgrading the core engine to BERT/RoBERTa for deeper semantic understanding of project descriptions.
+
+[ ] Live API Connectors: Direct integration with LinkedIn APIs to pull live job descriptions for real-time matching.
+
+[ ] Export Module: Generate annotated PDF reports for candidates to download their optimization plans.

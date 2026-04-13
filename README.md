@@ -18,7 +18,7 @@ MatchAI is an advanced recruitment engine that leverages Natural Language Proces
 ### Primary Interfaces
 | The Landing Experience | Personalized AI Gateway |
 | :---: | :---: |
-| ![Landing Page](./screenshot/landing%203.png) | ![Upload Page](./screenshot/personalised%20scan.png) |
+| ![Landing Page](./screenshot/landing%201%20-%20Copy.png) | ![Upload Page](./screenshot/personalised%20scan.png) |
 
 ### Inference Capabilities
 | Intelligence Dashboard & ATS Scoring |
@@ -46,7 +46,7 @@ Resume_AI_Project/
 │   │   └── page.tsx        # Landing Page UI
 │   └── lib/                # API and Auth helpers
 └── screenshot/             # Visual Assets Directory
-    ├── landing 3.png
+    ├── landing 1 - Copy.png
     ├── personalised scan.png
     └── user dashboard.png
     🛠 Tech Stack & Architecture

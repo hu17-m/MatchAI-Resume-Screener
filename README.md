@@ -47,7 +47,7 @@ Resume_AI_Project/
 │   └── public/             # Static assets
 └── screenshots/            # Project visual documentation
 
-📸 Project Screenshots
+ 📸 Project Screenshots
 
  1. Landing Page
 *Professional "Cream & Glass" aesthetic presenting project objectives.*
@@ -59,7 +59,7 @@ Resume_AI_Project/
 
  3. Analysis Dashboard
 *Dynamic ATS Scoring, customized Optimization Plans, and Skill-Mapped Recommendations.*
-![Dashboard](./screenshot/user%20dashboard.png) 
+![Dashboard](./screenshot/user%20dashboard.png)
 
 ⚙️ Installation & Setup
 Backend
